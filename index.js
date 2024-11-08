@@ -3,12 +3,12 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.live.com", //process.env.APP_HOST_HOTMAIL
-  port: 587,
-  secure: false, // true for port 465, false for other ports
+  host: process.env.APP_HOST_HOTMAIL,
+  port: process.env.APP_PORT_HOTMAIL,
+  secure: process.env.APP_SECURE_HOTMAIL, // true for port 465, false for other ports
   auth: {
-    user: "osmair144@hotmail.com",
-    pass: "!@159Wanessa753#$",
+    user: process.env.APP_USER,
+    pass: process.env.APP_PASSWORD,
   },
   // tls: {
   //   rejectUnauthorized: true,
